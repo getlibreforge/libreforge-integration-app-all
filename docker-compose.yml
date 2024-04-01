@@ -1,0 +1,22 @@
+version: '2.2'
+
+services:
+
+  libreforge-integration-app:
+    image: libreforge-integration-app
+    container_name: libreforge-integration-app
+    restart: always
+    ports:
+      - "9999:8080"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    networks:
+      - libreforge_net
+
+networks:
+  breadcrumb_net:
+    driver: bridge
+    driver_opts:
+      # MacOS related configuration, check MTU by `ifconfig | grep lo0`
+      com.docker.network.driver.mtu: 16384
