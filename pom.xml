@@ -98,7 +98,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.libreforge.integration.config.ApplicationConfig</mainClass>
+                    <mainClass>com.libreforge.integration.Application</mainClass>
                 </configuration>
                 <executions>
                     <execution>

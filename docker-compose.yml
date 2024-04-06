@@ -2,9 +2,9 @@ version: '2.2'
 
 services:
 
-  libreforge-integration-app:
-    image: libreforge-integration-app
-    container_name: libreforge-integration-app
+  libreforge-integration-app-all:
+    image: libreforge-integration-app-all
+    container_name: libreforge-integration-app-all
     restart: always
     ports:
       - "9999:8080"
@@ -15,7 +15,7 @@ services:
       - libreforge_net
 
 networks:
-  breadcrumb_net:
+  libreforge_net:
     driver: bridge
     driver_opts:
       # MacOS related configuration, check MTU by `ifconfig | grep lo0`
